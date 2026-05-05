@@ -1,5 +1,6 @@
 import { API, el, state } from "./core.js";
 import { luuLocalStorage } from "./cart-flow.js";
+import { getFilteredAndSortedList } from "./filter-flow.js";
 
 export const capNhatSoLuongGioHang = () => {
   const total = state.gioHang.reduce((sum, item) => sum + item.soLuong, 0);
@@ -47,9 +48,9 @@ window.showChiTietSP = (id) => {
 };
 
 window.changePage = (p) => {
-  state.currentPage = p;
-  renderDanhSachSP(state.danhSachSP);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    state.currentPage = p;
+    const danhSachHienTai = getFilteredAndSortedList();
+    renderDanhSachSP(danhSachHienTai);
 };
 
 export const renderDanhSachSP = (list) => {
