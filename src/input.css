@@ -1,2 +1,5 @@
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
 .error-msg { min-height: 1.25rem; }
-@import "tailwindcss"
+
+@import "tailwindcss";
