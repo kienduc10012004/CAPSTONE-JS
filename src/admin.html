@@ -33,7 +33,7 @@
             </div>
             <div>
               <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Hãng</label>
-              <select id="type" class="w-full border rounded-xl px-4 py-2.5 outline-none bg-slate-50">
+              <select id="type" class="w-full border rounded-xl px-4 py-2.5 outline-none bg-slate-50 cursor-pointer">
                 <option value="">Chọn loại</option>
                 <option value="iPhone">Apple (iPhone)</option>
                 <option value="Samsung">Samsung Galaxy</option>
@@ -76,9 +76,9 @@
             </div>
           </div>
           <div class="flex gap-2 pt-4">
-            <button type="submit" id="btnSave" class="flex-1 bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700">Tạo mới</button>
-            <button type="button" id="btnUpdate" class="flex-1 bg-amber-500 text-white font-bold py-3 rounded-xl hidden">Cập nhật</button>
-            <button type="button" id="btnReset" class="px-5 bg-slate-100 text-slate-600 font-bold rounded-xl py-3">Reset</button>
+            <button type="submit" id="btnSave" class="flex-1 bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 cursor-pointer">Tạo mới</button>
+            <button type="button" id="btnUpdate" class="flex-1 bg-amber-500 text-white font-bold py-3 rounded-xl hidden cursor-pointer">Cập nhật</button>
+            <button type="button" id="btnReset" class="px-5 bg-slate-100 text-slate-600 font-bold rounded-xl py-3 cursor-pointer">Reset</button>
           </div>
         </form>
       </div>
@@ -90,7 +90,7 @@
           <h2 class="font-bold">Danh sách sản phẩm</h2>
           <div class="flex gap-2 bg-white p-1 rounded-xl border border-slate-200">
             <input id="keyword" type="text" placeholder="Tìm kiếm theo tên điện thoại..." class="px-3 py-1 text-sm outline-none w-52">
-            <button id="btnSearch" class="bg-slate-800 text-white px-4 py-1.5 rounded-lg text-sm font-bold">Tìm</button>
+            <button id="btnSearch" class="bg-slate-800 text-white px-4 py-1.5 rounded-lg text-sm font-bold cursor-pointer">Tìm</button>
           </div>
         </div>
         <table class="w-full text-left border-collapse">

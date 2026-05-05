@@ -63,8 +63,8 @@ export const renderDanhSachSP = (danhSachSP) => {
             <td class="py-4 px-6"><span class="bg-slate-100 px-2 py-1 rounded text-[10px] font-bold uppercase text-slate-600 text-center">${phone.type}</span></td>
             <td class="py-4 px-6 text-center">
                 <div class="flex justify-center gap-2">
-                    <button class="bg-blue-500 text-white px-3 py-1.5 rounded-lg hover:bg-blue-600 text-xs shadow-sm" onclick="editProduct('${phone.id}')">Sửa</button>
-                    <button class="bg-rose-500 text-white px-3 py-1.5 rounded-lg hover:bg-rose-600 text-xs shadow-sm" onclick="deleteProduct('${phone.id}')">Xóa</button>
+                    <button class="bg-blue-500 text-white px-3 py-1.5 rounded-lg hover:bg-blue-600 text-xs shadow-sm cursor-pointer" onclick="editProduct('${phone.id}')">Sửa</button>
+                    <button class="bg-rose-500 text-white px-3 py-1.5 rounded-lg hover:bg-rose-600 text-xs shadow-sm cursor-pointer" onclick="deleteProduct('${phone.id}')">Xóa</button>
                 </div>
             </td>
         </tr>
@@ -79,7 +79,7 @@ const renderPagination = (totalItems) => {
     let buttons = "";
     for (let i = 1; i <= totalPages; i++) {
         const active = state.currentPage === i ? "bg-indigo-600 text-white shadow-md" : "bg-white border hover:bg-gray-300";
-        buttons += `<button onclick="changePage(${i})" class="w-9 h-9 rounded-lg font-bold transition-all ${active}">${i}</button>`;
+        buttons += `<button onclick="changePage(${i})" class="w-9 h-9 rounded-lg font-bold transition-all ${active} cursor-pointer">${i}</button>`;
     }
     dom.paginationContainer.innerHTML = buttons;
 };
