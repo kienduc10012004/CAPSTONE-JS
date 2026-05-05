@@ -40,7 +40,7 @@ window.showChiTietSP = (id) => {
           <p class="text-sm text-slate-500"><b>Camera:</b> Trước ${sp.frontCamera} / Sau ${sp.backCamera}</p>
           <p class="text-slate-600 italic">"${sp.desc}"</p>
         </div>
-        <button onclick="themVaoGioHang('${sp.id}')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl shadow-lg transition-all active:scale-95">THÊM VÀO GIỎ HÀNG</button>
+        <button onclick="themVaoGioHang('${sp.id}')" class="w-full bg-blue-600 hover:bg-blue-700 text-white cursor-pointer font-black py-4 rounded-2xl shadow-lg transition-all active:scale-95">THÊM VÀO GIỎ HÀNG</button>
       </div>
     </div>`;
   el.popup.classList.remove("hidden");
@@ -65,8 +65,8 @@ export const renderDanhSachSP = (list) => {
       <h3 class="font-bold text-slate-800 mb-1 group-hover:text-blue-600 transition-colors">${p.name}</h3>
       <p class="text-red-500 font-black text-lg mb-4">${Number(p.price).toLocaleString()} đ</p>
       <div class="grid grid-cols-2 gap-2">
-        <button onclick="showChiTietSP('${p.id}')" class="bg-slate-100 text-slate-600 font-bold py-2.5 rounded-xl text-xs hover:bg-slate-200">Chi tiết</button>
-        <button onclick="themVaoGioHang('${p.id}')" class="bg-blue-600 text-white font-bold py-2.5 rounded-xl text-xs hover:bg-blue-700 shadow-lg shadow-blue-100">Thêm giỏ</button>
+        <button onclick="showChiTietSP('${p.id}')" class="bg-slate-100 text-slate-600 font-bold py-2.5 rounded-xl text-xs hover:bg-slate-200 cursor-pointer">Chi tiết</button>
+        <button onclick="themVaoGioHang('${p.id}')" class="bg-blue-600 text-white font-bold py-2.5 rounded-xl text-xs hover:bg-blue-700 shadow-lg shadow-blue-100 cursor-pointer">Thêm giỏ</button>
       </div>
     </div>
   `).join("");
@@ -84,7 +84,7 @@ const renderPagination = (total) => {
   let btns = "";
   for(let i=1; i<=total; i++) {
     const active = i === state.currentPage ? "bg-blue-600 text-white" : "bg-white text-slate-400 border border-slate-200 hover:bg-slate-50";
-    btns += `<button onclick="changePage(${i})" class="w-10 h-10 rounded-xl font-bold transition-all ${active}">${i}</button>`;
+    btns += `<button onclick="changePage(${i})" class="w-10 h-10 rounded-xl font-bold transition-all ${active} cursor-pointer">${i}</button>`;
   }
   box.innerHTML = btns;
 };
