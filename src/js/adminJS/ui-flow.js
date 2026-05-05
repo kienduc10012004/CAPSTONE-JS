@@ -21,7 +21,7 @@ export const validateForm = () => {
     // Kiểm tra trống
     for (let key in data) {
         if (data[key] === "") {
-            setErrorMessage(key, "Trường này không được để trống");
+            setErrorMessage(key, "Chưa nhập");
             isValid = false;
         }
     }
